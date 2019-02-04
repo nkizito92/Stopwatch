@@ -1,4 +1,4 @@
-// pauses all stopwatches
+// pauses all stopwatches]
 var colorSwitch = "gren";
 pauseAll.addEventListener("click", function() {
   for (let i = 0; i < watchers.length; i++) {
@@ -7,23 +7,24 @@ pauseAll.addEventListener("click", function() {
        if(colorSwitch === "gren"){ 
            pauseAll.style.backgroundColor = "green";
            pauseAll.textContent = "Resume"; 
-           colorSwitch = "orang";}
+           colorSwitch = "orang";
+       }
        else{
              colorSwitch = "gren"; 
              pauseAll.textContent = "Pause";
              pauseAll.style.backgroundColor = "orange";
        } 
 });
-
 paused[0].addEventListener("click", function() {
-  watch.isOn ? stopSelect(watch) : startSelect(watch);
   selector = 0;
+  watch.isOn ? stopSelect(watch) : startSelect(watch);
 });
 paused[1].addEventListener("click", function() {
-  watch2.isOn ? stopSelect(watch2) : startSelect(watch2);
   selector = 1;
+  watch2.isOn ? stopSelect(watch2) : startSelect(watch2);
+  
 });
 paused[2].addEventListener("click", function() {
-  watch3.isOn ? stopSelect(watch3) : startSelect(watch3);
   selector = 2;
+  watch3.isOn ? stopSelect(watch3) : startSelect(watch3);
 });
