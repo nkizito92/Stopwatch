@@ -1,0 +1,82 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.timeBackground {
+  border: 5px solid black;
+  background-color: #1f1f1f;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  width: 300px;
+}
+
+#timer {
+  font-size: 30px;
+  color: green;
+  text-shadow: 2px 2px 3px greenyellow, -2px -2px 3px greenyellow,
+    -2px 2px 3px greenyellow, 2px -2px 3px greenyellow;
+}
+
+#timer2 {
+  font-size: 30px;
+  color: blue;
+  text-shadow: 2px 2px 3px lightblue, -2px -2px 3px lightblue,
+    -2px 2px 3px lightblue, 2px -2px 3px lightblue;
+}
+
+#timer3 {
+  font-size: 30px;
+  color: red;
+  text-shadow: 2px 2px 3px #e6adad, -2px -2px 3px #e6adad, -2px 2px 3px #e6adad,
+    2px -2px 3px #e6adad;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+button {
+  background-color: blue;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 2px 2px 3px cyan, -2px -2px 3px cyan, -2px 2px 3px cyan,
+    2px -2px 3px cyan;
+  margin: 0 5px;
+}
+
+button:nth-child(3) {
+  background-color: red;
+}
+button:nth-child(3):hover {
+  background-color: white;
+}
+button:nth-child(2) {
+  background-color: orange;
+  display: none;
+}
+button:nth-child(2):hover {
+  background-color: white;
+  color: black;
+}
+.allControl {
+  text-align: center;
+  width: 400px;
+}
