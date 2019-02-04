@@ -7,6 +7,10 @@ resetAll.addEventListener("click", function() {
     started[i].style.display = "inline-block";
   }
   x = "";
+  pauseAll.style.backgroundColor = "orange";
+  pauseAll.style.display = "none";
+  pauseAll.textContent = "Pause";
+  
 });
 resetBtn[0].addEventListener("click", function() {
   watch.reset();

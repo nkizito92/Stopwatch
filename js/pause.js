@@ -1,8 +1,18 @@
 // pauses all stopwatches
+var colorSwitch = "gren";
 pauseAll.addEventListener("click", function() {
   for (let i = 0; i < watchers.length; i++) {
     watchers[i].isOn ? watchers[i].stop() : watchers[i].start();
   }
+       if(colorSwitch === "gren"){ 
+           pauseAll.style.backgroundColor = "green";
+           pauseAll.textContent = "Resume"; 
+           colorSwitch = "orang";}
+       else{
+             colorSwitch = "gren"; 
+             pauseAll.textContent = "Pause";
+             pauseAll.style.backgroundColor = "orange";
+       } 
 });
 
 paused[0].addEventListener("click", function() {

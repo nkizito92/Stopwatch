@@ -79,4 +79,9 @@ button:nth-child(2):hover {
 .allControl {
   text-align: center;
   width: 400px;
+  display: inline-block;
+}
+#pauseAll {
+  
+  display: none;
 }

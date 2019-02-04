@@ -18,4 +18,5 @@ startAll.addEventListener("click", function() {
     paused[i].style.display = "inline-block";
     started[i].style.display = "inline-block";
   }
+  pauseAll.style.display = "inline-block";
 });
