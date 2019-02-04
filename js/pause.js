@@ -17,10 +17,13 @@ pauseAll.addEventListener("click", function() {
 
 paused[0].addEventListener("click", function() {
   watch.isOn ? stopSelect(watch) : startSelect(watch);
+  selector = 0;
 });
 paused[1].addEventListener("click", function() {
   watch2.isOn ? stopSelect(watch2) : startSelect(watch2);
+  selector = 1;
 });
 paused[2].addEventListener("click", function() {
   watch3.isOn ? stopSelect(watch3) : startSelect(watch3);
+  selector = 2;
 });
