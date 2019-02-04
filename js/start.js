@@ -1,4 +1,4 @@
-started[0].addEventListener("click", function() {
+  started[0].addEventListener("click", function() {
   paused[0].style.display = "inline-block";
   startSelect(watch);
 });
@@ -20,3 +20,4 @@ startAll.addEventListener("click", function() {
   }
   pauseAll.style.display = "inline-block";
 });
+ 

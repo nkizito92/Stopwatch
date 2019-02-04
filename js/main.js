@@ -12,7 +12,7 @@ var timer = document.getElementById("timer"),
   watch2 = new Stopwatch(timer2),
   watch3 = new Stopwatch(timer3),
   watchers = [watch, watch2, watch3];
-var selector = 0;
+var selector = "";
 
 function start() {
   for (let i = 0; i < timers.length; i++) {
@@ -29,6 +29,7 @@ function startSelect(elem) {
   paused[selector].style.display = "inline-block";
   paused[selector].textContent = "Pause";
   paused[selector].style.backgroundColor = "orange";
+  colorSwitch = "g";
 }
 
 function stop() {
@@ -36,6 +37,7 @@ function stop() {
     paused[i].textContent = "Resume";
     paused[i].style.backgroundColor = "green";
     watchers[i].stop();
+    colorSwitch = "o";
   }
 }
 function stopSelect(stopper) {

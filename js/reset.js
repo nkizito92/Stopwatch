@@ -4,9 +4,11 @@ resetAll.addEventListener("click", function() {
     watchers[i].reset();
     watchers[i].stop();
     paused[i].style.display = "none";
+    paused[i].style.backgroundColor = "orange";
     started[i].style.display = "inline-block";
+    paused[i].textContent = "Pause";
+    colorSwitch = "g";
   }
-  x = "";
   pauseAll.style.backgroundColor = "orange";
   pauseAll.style.display = "none";
   pauseAll.textContent = "Pause";

@@ -1,19 +1,27 @@
 // pauses all stopwatches]
-var colorSwitch = "gren";
+var colorSwitch = "g";
 pauseAll.addEventListener("click", function() {
+  
   for (let i = 0; i < watchers.length; i++) {
     watchers[i].isOn ? watchers[i].stop() : watchers[i].start();
+   
+   if(colorSwitch === "g") {
+     
+      paused[i].style.backgroundColor = "green";
+      paused[i].textContent = "Resume"; 
+      pauseAll.style.backgroundColor = "green";
+      pauseAll.textContent = "Resume"; 
+      colorSwitch = "o";
+   }
+   else{
+     paused[i].style.backgroundColor = "orange";
+     paused[i].textContent = "Pause";
+     pauseAll.textContent = "Pause";
+     pauseAll.style.backgroundColor = "orange";
+     colorSwitch = "g";
+
+   }
   }
-       if(colorSwitch === "gren"){ 
-           pauseAll.style.backgroundColor = "green";
-           pauseAll.textContent = "Resume"; 
-           colorSwitch = "orang";
-       }
-       else{
-             colorSwitch = "gren"; 
-             pauseAll.textContent = "Pause";
-             pauseAll.style.backgroundColor = "orange";
-       } 
 });
 paused[0].addEventListener("click", function() {
   selector = 0;
