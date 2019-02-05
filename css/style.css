@@ -51,6 +51,10 @@ button:hover {
   color: black;
 }
 
+button:active{
+  background-color: purple;
+}
+
 button {
   background-color: blue;
   padding: 10px;
@@ -66,6 +70,9 @@ button:nth-child(3) {
 }
 button:nth-child(3):hover {
   background-color: white;
+}
+button:nth-child(3):active {
+  background-color: purple;
 }
 button:nth-child(2) {
   background-color: orange;
