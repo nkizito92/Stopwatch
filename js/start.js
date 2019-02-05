@@ -12,12 +12,19 @@ started[2].addEventListener("click", function() {
 });
 
 // starts all stopwatches
-startAll.addEventListener("click", function() {
+startAll.addEventListener("click", runningall);
+function runningall() {
   for (let i = 0; i < watchers.length; i++) {
     watchers[i].start();
     paused[i].style.display = "inline-block";
+    paused[i].style.backgroundColor = "orange";
+    
+    paused[i].textContent = "Pause";
+    
     started[i].style.display = "inline-block";
   }
+  pauseAll.style.backgroundColor = "orange";
+  pauseAll.textContent = "Pause";
   pauseAll.style.display = "inline-block";
-});
+}
  

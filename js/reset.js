@@ -12,6 +12,7 @@ resetAll.addEventListener("click", function() {
   pauseAll.style.backgroundColor = "orange";
   pauseAll.style.display = "none";
   pauseAll.textContent = "Pause";
+  startAll.addEventListener("click", runningall);
   
 });
 resetBtn[0].addEventListener("click", function() {

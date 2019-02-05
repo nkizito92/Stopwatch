@@ -1,7 +1,7 @@
 // pauses all stopwatches]
 var colorSwitch = "g";
 pauseAll.addEventListener("click", function() {
-  
+  startAll.removeEventListener("click", runningall);
   for (let i = 0; i < watchers.length; i++) {
     watchers[i].isOn ? watchers[i].stop() : watchers[i].start();
    
@@ -35,4 +35,5 @@ paused[1].addEventListener("click", function() {
 paused[2].addEventListener("click", function() {
   selector = 2;
   watch3.isOn ? stopSelect(watch3) : startSelect(watch3);
+  
 });
