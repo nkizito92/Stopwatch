@@ -1,6 +1,6 @@
 html,
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -8,16 +8,15 @@ body {
 
 body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: gray;
 }
 .timeBackground {
   border: 5px solid black;
   background-color: #1f1f1f;
-  justify-content: center;
-  align-items: center;
+  
   margin: 0 auto;
   border-radius: 10px;
   text-align: center;
@@ -77,12 +76,33 @@ button:nth-child(2):hover {
   color: black;
 }
 .allControl {
-  margin-top: 40px;
-  text-align: center;
+  position: absolute;
+  top: 500px;
+  display: flex;
+  flex-direction: column;
   width: 400px;
-  display: inline-block;
+}
+.allControl button {
+  margin-top: 8px;
 }
 #pauseAll {
-  
   display: none;
+}
+
+@media only screen and (max-width: 735px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  }
+  .allControl {
+  top:600px;
+  display: block;
+  width: 300px;
+  text-align: center;
+}
+  .allControl button {
+  padding: 10px 40px;
+}
 }
