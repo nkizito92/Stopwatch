@@ -13,7 +13,9 @@ pauseAll.addEventListener("click", function() {
       pauseAll.style.backgroundColor = "green";
       pauseAll.innerHTML = " &#9658;"; 
       colorSwitch = "o";
-
+    // if(watchers[i].isOn === true){
+    //   runningall();
+    // }
    }
    else{
      paused[i].style.backgroundColor = "orange";
