@@ -84,7 +84,7 @@ button:nth-child(2):hover {
 }
 .allControl {
   position: absolute;
-  top: 500px;
+  top: 200px;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -96,7 +96,7 @@ button:nth-child(2):hover {
   display: none;
 }
 
-@media only screen and (max-width: 735px) {
+@media only screen and (max-width: 740px) {
   body {
     flex-direction: column;
     justify-content: center;
@@ -104,8 +104,6 @@ button:nth-child(2):hover {
   margin: 0 auto;
   }
   .allControl {
-  top:600px;
-  display: block;
   width: 300px;
   text-align: center;
 }
@@ -113,3 +111,15 @@ button:nth-child(2):hover {
   padding: 10px 40px;
 }
 }
+
+@media only screen and (min-height: 300px) {
+  .allControl {
+  top:600px;
+  display: block;
+  width: 300px;
+  text-align: center;
+}
+  
+}
+
+

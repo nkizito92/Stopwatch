@@ -47,14 +47,20 @@ function Stopwatch(elem) {
     offset = Date.now();
     this.isOn = true;
   };
+  
+  this.starting = function() {
+    interval = setInterval(resetTime.bind(this), 10);
+    offset = Date.now();
+    this.isOn = true;
+  };
 
-  this.stop = function() {
+  this.stopped = function() {
     clearInterval(interval);
     interval = null;
     this.isOn = false;
   };
 
-  this.reset = function() {
+  this.resetted = function() {
     time = 0;
     resetTime();
   };

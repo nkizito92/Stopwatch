@@ -19,29 +19,37 @@ function start() {
     watchers[i].start();
     paused[i].style.display = "inline-block";
     started[i].style.display = "none";
-    paused[i].textContent = "Pause";
+    paused[i].innerHTML = "&#10074; &#10074;";
     paused[i].style.backgroundColor = "orange";
   }
 }
 
-function startSelect(elem) {
-  elem.start();
+function starting() {
+    watchers[selector].starting()
+    paused[selector].style.display = "inline-block";
+    started[selector].style.display = "none";
+    paused[selector].innerHTML = "&#10074; &#10074;";
+    paused[selector].style.backgroundColor = "orange";
+}
+
+function startSelect(starter) {
+  starter.starting();
   paused[selector].style.display = "inline-block";
-  paused[selector].textContent = "Pause";
+  paused[selector].innerHTML = "&#10074; &#10074;";
   paused[selector].style.backgroundColor = "orange";
   colorSwitch = "g";
 }
 
-function stop() {
+function stopped() {
   for (let i = 0; i < timers.length; i++) {
-    paused[i].textContent = "Resume";
+    paused[i].innerHTML = " &#9658;";
     paused[i].style.backgroundColor = "green";
-    watchers[i].stop();
+    watchers[i].stopped();
     colorSwitch = "o";
   }
 }
 function stopSelect(stopper) {
-  paused[selector].textContent = "Resume";
+  paused[selector].innerHTML = " &#9658;";
   paused[selector].style.backgroundColor = "green";
-  stopper.stop();
+  stopper.stopped();
 }
