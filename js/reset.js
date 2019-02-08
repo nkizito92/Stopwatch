@@ -13,26 +13,18 @@ resetAll.addEventListener("click", function() {
   pauseAll.style.display = "none";
   pauseAll.innerHTML = "&#10074; &#10074;";
   startAll.addEventListener("click", runningall);
+  addStart();
   selector = "";
 });
-resetBtn[0].addEventListener("click", function() {
+
+function addStart() {
   started[0].addEventListener("click", zero);
-  watch.resetted();
-  watch.stopped();
-  started[0].style.display = "inline-block";
-  paused[0].style.display = "none";
-});
-resetBtn[1].addEventListener("click", function() {
   started[1].addEventListener("click", one);
-  watch2.resetted();
-  watch2.stopped();
-  started[1].style.display = "inline-block";
-  paused[1].style.display = "none";
-});
-resetBtn[2].addEventListener("click", function() {
   started[2].addEventListener("click", two);
-  watch3.resetted();
-  watch3.stopped();
-  started[2].style.display = "inline-block";
-  paused[2].style.display = "none";
-});
+  paused[0].addEventListener("click", pZero);
+  paused[1].addEventListener("click", pOne);
+  paused[2].addEventListener("click", pTwo);
+  resetBtn[0].addEventListener("click", rZero);
+  resetBtn[1].addEventListener("click", zOne);
+  resetBtn[2].addEventListener("click", zTwo);
+}
