@@ -1,3 +1,4 @@
+// disable a start function
 function zero() {
   selector="";
   paused[0].style.display = "inline-block";
@@ -15,11 +16,10 @@ function two() {
   paused[2].style.display = "inline-block";
   startSelect(watch3);
 }
-started[0].addEventListener("click", zero);
-started[1].addEventListener("click", one);
-started[2].addEventListener("click", two);
-
-// removing a stop pause function
+ started[0].addEventListener("click", zero);
+  started[1].addEventListener("click", one);
+  started[2].addEventListener("click", two);
+// disable a pause function
 
 function pZero (){
   started[0].removeEventListener("click", zero);
@@ -33,6 +33,13 @@ function pOne () {
   watch2.isOn ? stopSelect(watch2) : startSelect(watch2);
   
 };
+function pTwo ()  {
+  started[2].removeEventListener("click", two);
+  selector = 2;
+  watch3.isOn ? stopSelect(watch3) : startSelect(watch3);
+};
+
+// disable a reset function
 function rZero() {
   started[0].addEventListener("click", zero);
   watch.resetted();
@@ -40,23 +47,16 @@ function rZero() {
   started[0].style.display = "inline-block";
   paused[0].style.display = "none";
 }
-function zOne() {
+function rOne() {
   started[1].addEventListener("click", one);
   watch2.resetted();
   watch2.stopped();
   started[1].style.display = "inline-block";
   paused[1].style.display = "none";
 }
-function pTwo ()  {
-  started[2].removeEventListener("click", two);
-  selector = 2;
-  watch3.isOn ? stopSelect(watch3) : startSelect(watch3);
-  
-
-};
 
 
-function zTwo() {
+function rTwo() {
   started[2].addEventListener("click", two);
   watch3.resetted();
   watch3.stopped();

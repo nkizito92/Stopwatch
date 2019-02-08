@@ -25,9 +25,5 @@ var colorSwitch = "g";
 
    }
   }
+  
 });
-
-
-paused[0].addEventListener("click", pZero);
-paused[1].addEventListener("click", pOne);
-paused[2].addEventListener("click", pTwo);

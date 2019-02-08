@@ -25,6 +25,6 @@ function addStart() {
   paused[1].addEventListener("click", pOne);
   paused[2].addEventListener("click", pTwo);
   resetBtn[0].addEventListener("click", rZero);
-  resetBtn[1].addEventListener("click", zOne);
-  resetBtn[2].addEventListener("click", zTwo);
+  resetBtn[1].addEventListener("click", rOne);
+  resetBtn[2].addEventListener("click", rTwo);
 }
