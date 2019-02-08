@@ -1,4 +1,4 @@
-// disable a start function
+// disable stopwatch start function
 function zero() {
   selector="";
   paused[0].style.display = "inline-block";
@@ -19,7 +19,13 @@ function two() {
  started[0].addEventListener("click", zero);
   started[1].addEventListener("click", one);
   started[2].addEventListener("click", two);
-// disable a pause function
+  resetBtn[0].addEventListener("click", rZero);
+resetBtn[1].addEventListener("click", rOne);
+resetBtn[2].addEventListener("click", rTwo);
+paused[0].addEventListener("click", pZero);
+paused[1].addEventListener("click", pOne);
+paused[2].addEventListener("click", pTwo);
+// disable stopwatch pause function
 
 function pZero (){
   started[0].removeEventListener("click", zero);
@@ -39,7 +45,7 @@ function pTwo ()  {
   watch3.isOn ? stopSelect(watch3) : startSelect(watch3);
 };
 
-// disable a reset function
+// disable stopwatch reset function
 function rZero() {
   started[0].addEventListener("click", zero);
   watch.resetted();
